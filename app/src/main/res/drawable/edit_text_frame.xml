@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="4dp" />
+    <solid android:color="@color/colorFormElementBackground" />
+    <size
+
+        android:height="@dimen/height_50"
+        />
+
+    <stroke
+        android:width="1dip"
+        android:color="@color/colorEditTextBorder" />
+</shape>
