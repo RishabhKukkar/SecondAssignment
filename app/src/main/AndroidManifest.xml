@@ -11,12 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.CountryandStateActivity" />
         <activity
             android:name=".ui.ListUserActivity"
-            android:windowSoftInputMode="adjustPan">
-                                                   
-        </activity>
-        <activity android:name=".ui.PersonActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.PersonActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,11 +25,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

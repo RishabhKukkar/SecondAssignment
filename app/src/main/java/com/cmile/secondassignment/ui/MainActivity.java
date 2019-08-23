@@ -1,10 +1,11 @@
-package com.cmile.secondassignment;
+package com.cmile.secondassignment.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.cmile.secondassignment.R;
 import com.cmile.secondassignment.adapters.HomeModuleListAdapter;
 import com.cmile.secondassignment.models.HomeModuleList;
 import com.cmile.secondassignment.ui.BaseActivity;

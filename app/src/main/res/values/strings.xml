@@ -6,10 +6,12 @@
     <string name="age">Age</string>
     <string name="last_name">Last Name</string>
     <string name="first_name">First Name</string>
-    <string name="pick_country_and_state">Pick Country and State</string>
-    <string name="pick_date">Pick Date</string>
+    <string name="pick_country_and_state">Select Country and State</string>
+    <string name="pick_date">Select Birth Date</string>
     <string name="model_name">Model Name</string>
     <string name="done">Done</string>
     <string name="view_user">View User</string>
+    <string name="go_back">Go Back</string>
+    <string name="select_date">Select Date</string>
 
 </resources>

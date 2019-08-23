@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 import com.cmile.secondassignment.R;
@@ -20,11 +22,33 @@ public class PersonActivity extends AppCompatActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
+    @BindView(R.id.bt_pickDate)
+    Button bt_pickDate;
+
+    @BindView(R.id.bt_pickCountry)
+    Button bt_pickCountry;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person);
         ButterKnife.bind(this);
+
+        bt_pickDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PersonActivity.this, DatepickerActivity.class));
+            }
+        });
+
+        bt_pickCountry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PersonActivity.this, CountryandStateActivity.class));
+            }
+        });
+
+
         setToolbar();
     }
 
@@ -46,7 +70,7 @@ public class PersonActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             // Respond to the action bar's Up/Home button
             case R.id.view_users:
-                    startActivity(new Intent(PersonActivity.this,ListUserActivity.class));
+                startActivity(new Intent(PersonActivity.this, ListUserActivity.class));
                 return true;
         }
         return super.onOptionsItemSelected(item);
