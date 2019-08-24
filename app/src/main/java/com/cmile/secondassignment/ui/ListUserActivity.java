@@ -44,20 +44,12 @@ public class ListUserActivity extends BaseActivity implements UserListViewAdapte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_user);
         ButterKnife.bind(this);
-        setupToolbar();
+        setupToolbar(toolbar,getString(R.string.user_list_activity));
 
         getUsersList();
 
     }
 
-    private void setupToolbar() {
-        toolbar.setTitle(getString(R.string.user_list_activity));
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        final Drawable upArrow = getResources().getDrawable(R.drawable.ic_arrow_back);
-        upArrow.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
-        getSupportActionBar().setHomeAsUpIndicator(upArrow);
-    }
 
     private void getUsersList() {
         common.db.collection("userDetails").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {

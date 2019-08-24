@@ -22,6 +22,7 @@ public class Common {
 
     //Strings
     public String[] HomeModuleList={"Add Information","View Information"};
+    public  String postDate;
 
 
     // FireBase

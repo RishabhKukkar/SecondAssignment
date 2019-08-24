@@ -1,6 +1,8 @@
 package com.cmile.secondassignment.ui;
 
+import android.bluetooth.BluetoothAssignedNumbers;
 import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,11 +15,17 @@ import android.widget.Button;
 
 
 import com.cmile.secondassignment.R;
+import com.cmile.secondassignment.utils.Common;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class PersonActivity extends AppCompatActivity {
+import static com.cmile.secondassignment.utils.Constants.DATE;
+import static com.cmile.secondassignment.utils.Constants.DATEPICKER_RESULT;
+import static com.cmile.secondassignment.utils.Constants.SET_DATE;
+
+public class PersonActivity extends BaseActivity {
+    private Common common = new Common();
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -37,7 +45,7 @@ public class PersonActivity extends AppCompatActivity {
         bt_pickDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PersonActivity.this, DatepickerActivity.class));
+                startActivityForResult(new Intent(PersonActivity.this, DatepickerActivity.class), 2);
             }
         });
 
@@ -48,13 +56,7 @@ public class PersonActivity extends AppCompatActivity {
             }
         });
 
-
-        setToolbar();
-    }
-
-    private void setToolbar() {
-        toolbar.setTitle(getString(R.string.app_name));
-        setSupportActionBar(toolbar);
+        setupToolbar(toolbar, getString(R.string.app_name));
     }
 
     @Override
@@ -75,5 +77,23 @@ public class PersonActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == DATEPICKER_RESULT) {
+            if (data != null && data.getExtras() != null) {
+                Bundle bundle = data.getBundleExtra(SET_DATE);
+                common.postDate = bundle.getString(DATE);
+                setDate(common.postDate);
+            }
+        }
+    }
+
+    private void setDate(String date) {
+        bt_pickDate.setText(date);
+    }
+
 }
 
