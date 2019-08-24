@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.cmile.secondassignment">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -10,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="AnyStrings">
         <activity android:name=".ui.CountryandStateActivity" />
+        <activity android:name=".ui.DatepickerActivity" />
         <activity
             android:name=".ui.ListUserActivity"
             android:windowSoftInputMode="adjustPan" />

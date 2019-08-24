@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:fontFamily">@font/sf_ui_display_regular</item>
+        <item name="fontFamily">@font/sf_ui_display_regular</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -18,8 +18,8 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:background">@drawable/btn_accent</item>
+        <item name="textAllCaps">true</item>
+        <item name="background">@drawable/btn_accent</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingLeft">@dimen/space10</item>
         <item name="android:paddingRight">@dimen/space10</item>
@@ -29,11 +29,20 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:background">@drawable/button_bg_blue</item>
+        <item name="textAllCaps">true</item>
+        <item name="background">@drawable/button_bg_blue</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingLeft">@dimen/space10</item>
         <item name="android:paddingRight">@dimen/space10</item>
+    </style>
+
+    <style name="RvTextView">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">@dimen/height_16</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/edit_text_frame</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">@dimen/space10</item>
     </style>
 
 </resources>

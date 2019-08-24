@@ -32,7 +32,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/space10"
             android:adjustViewBounds="true"
-            android:src="@drawable/ic_launcher_background" />
+            ads:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
             android:id="@+id/tv_module_card"

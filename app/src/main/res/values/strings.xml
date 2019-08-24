@@ -13,5 +13,6 @@
     <string name="view_user">View User</string>
     <string name="go_back">Go Back</string>
     <string name="select_date">Select Date</string>
+    <string name="user_list_activity">User List Activity</string>
 
 </resources>

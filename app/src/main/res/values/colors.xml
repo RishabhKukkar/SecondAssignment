@@ -31,4 +31,6 @@
     <color name="colorClicked2">#F5F5F5</color>
 
     <color name="colourTextHeader">#107896</color>
+    <color name="black">#424242</color>
+    <color name="grey">#5C5C5C</color>
 </resources>
